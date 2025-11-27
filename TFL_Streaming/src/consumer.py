@@ -83,7 +83,7 @@ df = df.withColumn(
 # ------------------------------------------------------------
 deduped = (
     df
-        .withWatermark("event_ts", "20 minutes")
+        .withWatermark("event_ts", "10 minutes")
         .dropDuplicates(["unique_key"])
 )
 
